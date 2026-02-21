@@ -96,15 +96,15 @@ button {
   margin-top: 0.5rem;
   padding: 0.85rem;
   border: 0;
-  background: linear-gradient(135deg, var(--accent), var(--sunflower));
-  color: #2c1f14;
+  background: var(--ok);
+  color: #ffffff;
   font-weight: 600;
 }
 
 button:active,
 button:hover {
-  background: var(--accent-strong);
-  color: #fff7ef;
+  background: #245938;
+  color: #ffffff;
 }
 
 .submit-message {
