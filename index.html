@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>Westhound Incident Reports</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1>Westhound Incident Reports</h1>
+        <p id="networkStatus" class="status" aria-live="polite">Checking connection...</p>
+      </header>
+
+      <form id="incidentForm" class="form">
+        <label>
+          Attendant Name
+          <input name="attendantName" id="attendantName" type="text" required />
+        </label>
+
+        <label>
+          Email Address (optional)
+          <input name="emailAddress" id="emailAddress" type="email" />
+        </label>
+
+        <label>
+          Date of Incident
+          <input name="dateOfIncident" id="dateOfIncident" type="date" required />
+        </label>
+
+        <label>
+          Time of Incident
+          <input name="timeOfIncident" id="timeOfIncident" type="time" required />
+        </label>
+
+        <label>
+          Time of Day
+          <select name="timeOfDay" id="timeOfDay" required>
+            <option value="">Select...</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+            <option>Night</option>
+          </select>
+        </label>
+
+        <label>
+          Type of Incident
+          <select name="typeOfIncident" id="typeOfIncident" required>
+            <option value="">Select...</option>
+            <option>Fight</option>
+            <option>Near Miss</option>
+            <option>Escape Attempt</option>
+            <option>Property Damage</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>
+          Severity Level
+          <select name="severityLevel" id="severityLevel" required>
+            <option value="">Select...</option>
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+            <option>Critical</option>
+          </select>
+        </label>
+
+        <label>
+          Dog Name(s)
+          <input name="dogNames" id="dogNames" type="text" required />
+        </label>
+
+        <label>
+          Owner Name(s)
+          <input name="ownerNames" id="ownerNames" type="text" />
+        </label>
+
+        <label>
+          Dogs Separated?
+          <select name="dogsSeparated" id="dogsSeparated" required>
+            <option value="">Select...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+
+        <label>
+          Dog Removed?
+          <select name="dogRemoved" id="dogRemoved" required>
+            <option value="">Select...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+
+        <label>
+          Any Injuries?
+          <select name="anyInjuries" id="anyInjuries" required>
+            <option value="">Select...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+
+        <div id="injuryFields" class="conditional-fields is-hidden">
+          <label>
+            Who Was Injured?
+            <input name="whoInjured" id="whoInjured" type="text" />
+          </label>
+
+          <label>
+            Injury Description
+            <textarea name="injuryDescription" id="injuryDescription" rows="3"></textarea>
+          </label>
+        </div>
+
+        <label>
+          Actions Taken
+          <textarea name="actionsTaken" id="actionsTaken" rows="3" required></textarea>
+        </label>
+
+        <label>
+          Media Link
+          <input name="mediaLink" id="mediaLink" type="url" placeholder="https://..." />
+        </label>
+
+        <label>
+          Requires Follow Up?
+          <select name="requiresFollowUp" id="requiresFollowUp" required>
+            <option value="">Select...</option>
+            <option>Yes</option>
+            <option>No</option>
+          </select>
+        </label>
+
+        <label>
+          Manager Notes
+          <textarea name="managerNotes" id="managerNotes" rows="3"></textarea>
+        </label>
+
+        <label>
+          Incident Description
+          <textarea
+            name="incidentDescription"
+            id="incidentDescription"
+            rows="5"
+            required
+          ></textarea>
+        </label>
+
+        <button id="submitButton" type="submit">Submit Report</button>
+        <p id="submitMessage" class="submit-message" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
