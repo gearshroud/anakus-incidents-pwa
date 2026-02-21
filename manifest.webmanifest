@@ -1,11 +1,11 @@
 {
-  "name": "Westhound Incident Reports",
-  "short_name": "Westhound IR",
-  "description": "Simple staff incident report app for Westhound.",
+  "name": "Tails & Ales Incident Reports",
+  "short_name": "Tails & Ales IR",
+  "description": "Simple staff incident report app for Tails & Ales.",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0b1220",
-  "theme_color": "#0f172a",
+  "background_color": "#fff8ef",
+  "theme_color": "#c65d1e",
   "icons": [
     {
       "src": "icons/icon-192.png",

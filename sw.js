@@ -1,4 +1,4 @@
-const CACHE_NAME = "westhound-ir-v1";
+const CACHE_NAME = "tails-and-ales-ir-v1";
 const APP_SHELL = [
   "./",
   "index.html",

@@ -1,6 +1,6 @@
 const SCRIPT_URL =
   "https://script.google.com/macros/s/AKfycbybvNKLtz6fg27tMWF_DHZY1VNLkwNri85wlODZmwgbCqCI39Xul7SZ2jgTYqB4NMDesg/exec";
-const SHARED_KEY = "westhound-incident-v1";
+const SHARED_KEY = "tails-and-ales-incident-v1";
 
 const form = document.getElementById("incidentForm");
 const statusEl = document.getElementById("networkStatus");
@@ -57,11 +57,11 @@ function toggleInjuryFields() {
 }
 
 function saveAttendantName() {
-  localStorage.setItem("westhound.attendantName", attendantNameInput.value.trim());
+  localStorage.setItem("tails-and-ales.attendantName", attendantNameInput.value.trim());
 }
 
 function loadAttendantName() {
-  const saved = localStorage.getItem("westhound.attendantName");
+  const saved = localStorage.getItem("tails-and-ales.attendantName");
   if (saved) attendantNameInput.value = saved;
 }
 

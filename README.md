@@ -1,4 +1,4 @@
-# Westhound Incident Reports PWA
+# Tails & Ales Incident Reports PWA
 
 Lightweight, mobile-first Progressive Web App for staff to submit incident reports.
 
@@ -54,12 +54,12 @@ On submit, the app sends a JSON payload containing:
 - `incidentDescription`
 - `submittedAt`
 
-The request includes `X-Shared-Key` header set from `SHARED_KEY`.
+The request includes `key` in the JSON body set from `SHARED_KEY`.
 
 ## PWA Notes
 
 - App defaults `dateOfIncident` and `timeOfIncident` to current local date/time.
-- `attendantName` is saved in `localStorage` (`westhound.attendantName`).
+- `attendantName` is saved in `localStorage` (`tails-and-ales.attendantName`).
 - Injury fields show only when `anyInjuries` is `Yes`.
 - Online/offline status is visible at the top of the app.
 - Service worker caches the app shell for offline use.
